@@ -1,0 +1,24 @@
+{
+  "name": "githubnewreleasenotif",
+  "version": "1.5.0",
+  "description": "Discord bot for notifying on new release",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Discord.js",
+    "bot",
+    "GitHub",
+    "release",
+    "commit",
+    "notification"
+  ],
+  "author": "Loekaars",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "discord.js": "^11.4.2",
+    "xmlhttprequest": "^1.8.0"
+  }
+}
