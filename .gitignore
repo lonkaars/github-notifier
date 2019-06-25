@@ -1,9 +1,7 @@
 sketch.xd
 sitesvgoutput
-website
 todo.todo
 testing.js
-index.html
 .vscode
 node_modules
 hooks
@@ -13,3 +11,4 @@ package-lock.json
 bot.code-workspace
 config
 description
+token.json
