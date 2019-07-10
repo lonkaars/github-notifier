@@ -13,6 +13,9 @@ $(document).ready(() => {
     })
 })
 
+var arrow = 'show'
+var prevarrow = ['show', 'show']
+
 
 // Navbar scroll effects
 $(window).on('scroll', function() {
@@ -20,21 +23,29 @@ $(window).on('scroll', function() {
         $('.header').addClass('show')
         $('body').addClass('show')
         $('.downarrow').addClass('show')
+        shiftarrow(`hide`);
     }
     else {
         $('body').removeClass('show')
         $('.header').removeClass('show')
         $('.downarrow').removeClass('show')
+        shiftarrow(`show`);
+    }
+    if(prevarrow[0] != prevarrow[1]){
+        showHideArrow(prevarrow[0])
     }
 })
 
-// Invitelink hover
-$('.invitelink').hover(
-    () => {
-        $(this).addClass('hover');
-        console.log('gert')
-    },
-    () => {
-        $(this).removeClass('hover');
-    }
-)
+function shiftarrow(val){
+    prevarrow[1] = prevarrow[0]
+    prevarrow[0] = val
+}
+
+function showHideArrow(showhide){
+    anime({
+        targets: '.downarrow',
+        easing: 'easeInOutSine',
+        duration: 300,
+        opacity: showhide == 'show' ? [0, 1] : [1, 0]
+    })
+}

@@ -200,7 +200,6 @@ b {
 .downarrow {
     width: 30px;
     will-change: transform;
-    transition: .3s;
 }
 
 .downarrow.show {
@@ -270,9 +269,11 @@ code {
     box-shadow: 0px 35px 30px -10px #2b3f9f88;
     text-decoration: none;
     border-radius: 2px;
+
+    transition: .2s;
 }
 
-.invitelink.hover {
+.invitelink:hover {
     box-shadow: 0px 12px 10px -3px #2b3f9f88;
     letter-spacing: 3px;
     padding: 20px 120px;
